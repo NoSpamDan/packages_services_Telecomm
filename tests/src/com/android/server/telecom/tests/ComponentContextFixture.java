@@ -209,6 +209,10 @@ public class ComponentContextFixture implements TestFixture<Context> {
                 return Context.AUDIO_SERVICE;
             } else if (svcClass == TelephonyManager.class) {
                 return Context.TELEPHONY_SERVICE;
+            } else if (svcClass == CarrierConfigManager.class) {
+                return Context.CARRIER_CONFIG_SERVICE;
+            } else if (svcClass == SubscriptionManager.class) {
+                return Context.TELEPHONY_SUBSCRIPTION_SERVICE;
             }
             throw new UnsupportedOperationException();
         }
